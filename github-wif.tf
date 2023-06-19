@@ -1,3 +1,4 @@
+# Deploy secrets to GitHub Actions using Terraform
 
 resource "github_actions_secret" "wif-sa-email" {
   repository      = var.FLUX_GITHUB_REPO
