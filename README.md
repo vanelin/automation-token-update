@@ -98,3 +98,6 @@ module.secret-manager.google_secret_manager_secret_version.secret-version["TELE_
 ```bash
 $ terraform destroy -var-file=vars.tfvars
 ```
+
+## Video demonstration:
+[![IMAGE ALT TEXT](images/preview.png)](https://share.cleanshot.com/sG3vjLRW "Click to watch")
