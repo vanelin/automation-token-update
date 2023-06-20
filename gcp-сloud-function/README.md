@@ -27,6 +27,17 @@ This manual will guide you through the process of creating a Google Cloud Functi
    --set-env-vars github_token=<your-github-token>,github_user=<your-github-username>,github_repo=gke-flux-gitops
    ```
 
+6. [Test a repository dispatch event](https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#create-a-repository-dispatch-event). Works with GitHub Apps
+```bash
+ curl -L \
+  -X POST \
+  -H "Accept: application/vnd.github+json" \
+  -H "Authorization: Bearer $github_token"\
+  -H "X-GitHub-Api-Version: 2022-11-28" \
+  https://api.github.com/repos/$github_user/$github_repo/dispatches \
+  -d '{"event_type":"update-secret"}'
+```
+
 Ensure that you replace `<your-project>`, `<your-github-token>`, and `<your-github-username>` with the appropriate values.
 
 After deployment, the Cloud Function will be triggered whenever a message is published to the specified Cloud Pub/Sub topic. Make sure to test and validate the function's behavior according to your requirements.
