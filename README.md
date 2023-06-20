@@ -100,4 +100,4 @@ $ terraform destroy -var-file=vars.tfvars
 ```
 
 ## Video demonstration:
-[![IMAGE ALT TEXT](images/preview.png)](https://share.cleanshot.com/sG3vjLRW "Click to watch")
+[![IMAGE ALT TEXT](images/preview.png)](https://share.cleanshot.com/QyhP4svh "Click to watch")
