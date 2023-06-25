@@ -1,4 +1,6 @@
 # Setup GCP Workload Identity Federation + GitHub Actions + Secret Manager + Terraform.
+DLS for [tf-gcp-gke-cluster-flux](https://github.com/vanelin/tf-gcp-gke-cluster-flux) repository!
+
 We’ll create the following resources by terraform:
 
 1. Enable GCP apis (enabled-apis.tf)
