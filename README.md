@@ -17,6 +17,8 @@ Development stage, it can be configured manually for now:
 - [Google Secret Manager for Terraform](https://github.com/GoogleCloudPlatform/terraform-google-secret-manager)
 - [Get secretmanager secrets in GitHub Actions runners](https://github.com/google-github-actions/get-secretmanager-secrets)
 - [Mozilla SOPS](https://github.com/mozilla/sops)
+- [How does the GCP Workload Identity Federation work with Github Provider?](https://medium.com/google-cloud/how-does-the-gcp-workload-identity-federation-work-with-github-provider-a9397efd7158)
+- [Securely accessing Google Cloud through GitHub with Workload Identity Federation](https://medium.com/cts-technologies/securely-access-google-cloud-through-github-with-workload-identity-federation-806a4bd87c85)
 
 ### The combination of GCP Workload Identity Federation, GitHub Actions, Secret Manager, and Terraform is aimed at providing a secure and streamlined approach for deploying applications and using resources to Google Cloud Platform (GCP) using GitHub pipelines. Here's how each component plays a role:
 
