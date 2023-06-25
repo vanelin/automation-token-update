@@ -93,7 +93,7 @@ random_id.random_topic_id_suffix
 module.secret-manager.google_secret_manager_secret.secrets["TELE_TOKEN"]
 module.secret-manager.google_secret_manager_secret_version.secret-version["TELE_TOKEN"]
 ```
-5. [Set up GCP Cloud Functions](gcp-сloud-function/README.md)
+5. [Set up GCP Cloud Functions](gcp-cloud-function/README.md)
 6. Create your pipline using the WIF in GitHub Action
 7. Change the telegram token simply by adding new token to `vars.tfvars` and running `terraform apply -var-file=vars.tfvars`
 8. Destroy all resources:
