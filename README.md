@@ -100,6 +100,34 @@ module.secret-manager.google_secret_manager_secret_version.secret-version["TELE_
 ```bash
 $ terraform destroy -var-file=vars.tfvars
 ```
+*If you get an error after `terraform destroy`.
+This error message indicates that Terraform failed to disable the service for the <your-project> project, which we also activated it with terraform in file [enabled-apis.tf](enabled-apis.tf). The reason for the error is that there are other active services that were not created by terraform and that depend on this service.*
+```bash
+Error: Error when reading or editing Project Service <your-project>/iam.googleapis.com: Error disabling service "iam.googleapis.com" for project "<your-project>": googleapi: Error 400: The service iam.googleapis.com is depended on by the following active service(s): container.googleapis.com; Please specify disable_dependent_services=true if you want to proceed with disabling all services.
+ Help
+ Details:
+ [
+   {
+     "@type": "type.googleapis.com/google.rpc.PreconditionFailure",
+     "violations": [
+       {
+         "subject": "?error_code=100001\u0026service_name=iam.googleapis.com\u0026services=container.googleapis.com",
+         "type": "googleapis.com"
+       }
+     ]
+   },
+   {
+     "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+     "domain": "serviceusage.googleapis.com",
+     "metadata": {
+       "service_name": "iam.googleapis.com",
+       "services": "container.googleapis.com"
+     },
+     "reason": "COMMON_SU_SERVICE_HAS_DEPENDENT_SERVICES"
+   }
+ ]
+ , failedPrecondition
+```
 
 ## Video demonstration:
 [![IMAGE ALT TEXT](images/preview.png)](https://share.cleanshot.com/QyhP4svh "Click to watch")
